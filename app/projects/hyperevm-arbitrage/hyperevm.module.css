@@ -1,0 +1,222 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c5282;
+  text-align: center;
+  margin: 3rem 0;
+  line-height: 1.4;
+}
+
+.sectionTitle {
+  position: relative;
+  margin: 3rem 0 2rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.sectionTitleText {
+  display: inline-block;
+  color: #2c5282;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #4299e1;
+  margin-bottom: -2px;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 1.5rem 0;
+  color: #2d3748;
+}
+
+.featureBox {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.featureTitle {
+  color: #2c5282;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.featureList,
+.analysisList,
+.strategyList,
+.implementationList,
+.featureGroupList,
+.additionalFeaturesList,
+.futureList {
+  list-style-type: none;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.featureList li,
+.analysisList li,
+.strategyList li,
+.implementationList li,
+.featureGroupList li,
+.additionalFeaturesList li,
+.futureList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+.featureList li::before,
+.analysisList li::before,
+.strategyList li::before,
+.implementationList li::before,
+.featureGroupList li::before,
+.additionalFeaturesList li::before,
+.futureList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4299e1;
+  font-weight: bold;
+}
+
+.implementationSection {
+  margin: 2rem 0;
+}
+
+.implementationItem {
+  margin-bottom: 2rem;
+}
+
+.implementationTitle {
+  display: flex;
+  align-items: center;
+  color: #2c5282;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.arrow {
+  color: #4299e1;
+  margin-right: 0.5rem;
+}
+
+.codeButton {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  background-color: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.codeButton:hover {
+  background-color: #38a169;
+}
+
+.featureGroup {
+  margin-bottom: 2.5rem;
+}
+
+.featureGroupTitle {
+  display: flex;
+  align-items: center;
+  color: #2c5282;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #718096;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modalContent pre {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.modalContent code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+
+  .sectionTitleText {
+    font-size: 1.25rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .featureBox,
+  .implementationItem {
+    padding: 1.5rem;
+  }
+
+  .codeButton {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+} 

@@ -1,0 +1,531 @@
+/* ====== トップページ用 CSS ====== */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f9fd;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+  text-align: center;
+  padding: 80px 20px 50px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #007acc;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.3rem;
+  color: #444;
+  margin-top: 10px;
+}
+
+footer {
+  background: #eaf4ff;
+  text-align: center;
+  padding: 30px 0;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+/* Aboutセクション */
+#about {
+  background-color: #1a1f2b;
+  padding: 40px 30px;
+  border-radius: 12px;
+  margin-top: 60px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  color: #f5f5f5;
+}
+
+#about h2 {
+  font-size: 1.8rem;
+  border-left: 6px solid #00c2ff;
+  padding-left: 12px;
+  margin-bottom: 20px;
+  color: #00c2ff;
+}
+
+#about p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #ddd;
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a2b4c;
+  margin: 40px 0 20px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* フェードインアニメーション */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 画像付きプロジェクトカード */
+.image-card {
+  display: flex;
+  align-items: stretch;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+  height: 160px;
+}
+
+.image-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-content {
+  width: 50%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.card-image {
+  width: 50%;
+  position: relative;
+  height: 100%;
+  background-color: #f0f4f8;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  color: #007acc;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project-description {
+  font-size: 0.97rem;
+  color: #444;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .image-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card-content {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+/* SUIプロジェクトページ専用の背景スタイル */
+.project-page[data-project="sui"] {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-page[data-project="sui"]::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/trumpSUI_made_by_GPT.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  opacity: 0.08; /* ← 透かしの強さ */
+  z-index: -1;
+  filter: blur(1px); /* ← 少しぼかして自然な雰囲気に */
+  pointer-events: none;
+}
+
+
+/* プロジェクトページ共通のスタイル */
+.project-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.project-image {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.project-description {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-description h2 {
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+  color: #333;
+}
+
+.project-description p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-description ul, .project-description ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.project-description li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.diagram-container {
+  background: rgba(248, 249, 250, 0.95);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+}
+
+.diagram-container .label {
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+}
+
+.diagram-container .box {
+  background: white;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+  margin: 0.5rem 0;
+}
+
+.diagram-container .arrow {
+  text-align: center;
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.profit-summary {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(233, 236, 239, 0.95);
+  border-radius: 4px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+}
+
+.profit-summary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profit-summary li {
+  margin: 0.5rem 0;
+}
+
+.profit-amount {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.project-navigation {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background: #0056b3;
+}
+
+/* Modal Styles */
+.modal-trigger {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.modal-trigger:hover {
+  transform: scale(1.02);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: none;
+}
+
+.modal-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 1001;
+  display: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .project-header h1 {
+    font-size: 2rem;
+  }
+
+  .project-image {
+    height: 300px;
+  }
+
+  .project-description {
+    padding: 20px;
+  }
+}
+
+/* トランザクション画像のスタイル */
+.transaction-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.transaction-image img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.transaction-image img:hover {
+  transform: scale(1.02);
+}
+
+/* HyperEVMプロジェクトページ専用スタイル */
+.project-page[data-project="hyperevm"] {
+  position: relative;
+  background: #0d1117;
+  color: #c9d1d9;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.project-page[data-project="hyperevm"] .project-header {
+  text-align: left;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.project-page[data-project="hyperevm"] .project-header h1 {
+  color: #58a6ff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-page[data-project="hyperevm"] .project-subtitle {
+  color: #8b949e;
+  font-size: 1.1rem;
+}
+
+.project-page[data-project="hyperevm"] .project-content {
+  background: #0d1117;
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 1012px;
+}
+
+.project-page[data-project="hyperevm"] h2 {
+  color: #58a6ff;
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.project-page[data-project="hyperevm"] h3 {
+  color: #58a6ff;
+  font-size: 1.25rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.project-page[data-project="hyperevm"] p {
+  color: #c9d1d9;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.project-page[data-project="hyperevm"] .highlight {
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+.project-page[data-project="hyperevm"] ul {
+  list-style: disc;
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+.project-page[data-project="hyperevm"] ul li {
+  color: #c9d1d9;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.project-page[data-project="hyperevm"] .code-block {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  overflow-x: auto;
+}
+
+.project-page[data-project="hyperevm"] .code-block pre {
+  margin: 0;
+  color: #c9d1d9;
+}
+
+.project-page[data-project="hyperevm"] .back-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid;
+  border-radius: 6px;
+  appearance: none;
+  color: #c9d1d9;
+  background-color: #21262d;
+  border-color: rgba(240,246,252,0.1);
+  box-shadow: 0 0 transparent;
+  transition: .2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color,background-color,border-color;
+  margin-top: 2rem;
+  text-decoration: none;
+}
+
+.project-page[data-project="hyperevm"] .back-button:hover {
+  background-color: #30363d;
+  border-color: #8b949e;
+  transition-duration: .1s;
+}
+
+.project-page[data-project="hyperevm"] .image-container {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.project-page[data-project="hyperevm"] .image-container img {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+}
+
+.project-page[data-project="hyperevm"] .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.project-page[data-project="hyperevm"] .stat-item {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.project-page[data-project="hyperevm"] .stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+}
+
+.project-page[data-project="hyperevm"] .stat-label {
+  color: #8b949e;
+  font-size: 0.875rem;
+} 

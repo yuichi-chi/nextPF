@@ -1,0 +1,31 @@
+#############################
+# Node / Next.js / Hardhat  #
+#############################
+
+# 依存パッケージ
+node_modules/
+
+# Next.js ビルド生成物
+.next/
+out/
+
+# Hardhat や TypeScript の生成物
+dist/
+cache/
+artifacts/
+coverage/
+
+# 環境変数・秘密鍵
+.env
+.env.*
+
+# ログファイル
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# IDE / エディタ
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

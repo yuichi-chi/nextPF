@@ -1,0 +1,208 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.mainTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+
+.sectionTitle {
+  position: relative;
+  text-align: center;
+  margin: 4rem 0 2rem;
+}
+
+.sectionTitleText {
+  background: #fff;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionTitle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+  z-index: 0;
+}
+
+.text {
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.mintSection {
+  background: #f9fafb;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 3rem 0;
+}
+
+.mintBox {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mintInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.price, .supply {
+  font-weight: 500;
+  color: #374151;
+}
+
+.mintControls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f3f4f6;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.counterBtn {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.counterBtn:hover:not(:disabled) {
+  background: #f9fafb;
+}
+
+.counterBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.count {
+  font-weight: 500;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.mintButton {
+  flex: 1;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mintButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mintButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.total {
+  text-align: right;
+  font-weight: 500;
+  color: #374151;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.featureList li {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.featureList li::before {
+  content: '✦';
+  position: absolute;
+  left: 1rem;
+  color: #6366f1;
+}
+
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.roadmapItem {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.roadmapItem h3 {
+  color: #6366f1;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .mintControls {
+    flex-direction: column;
+  }
+
+  .counter {
+    width: 100%;
+    justify-content: center;
+  }
+} 
